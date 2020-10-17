@@ -19,12 +19,7 @@ interface UnixTimeInterface
      *
      * @return int
      */
-    public function time(): int;
-
-    /**
-     * Echo the stored unix time.
-     */
-    public function echo();
+    public function time(bool $echo = false): int;
 
     /**
      * Returns the unix time in relation to the current day
@@ -79,14 +74,10 @@ class UnixTime implements UnixTimeInterface
         return $this->unixTime;
     }
 
-    public function time(): int
+    public function time(bool $echo = false): int
     {
+        if($echo) echo $this->unixTime;
         return $this->unixTime;
-    }
-
-    public function echo()
-    {
-        echo $this->unixTime;
     }
 
     public function format()
