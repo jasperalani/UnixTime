@@ -25,6 +25,11 @@ interface UnixTimeInterface
      * Echo the stored unix time.
      */
     public function echo();
+
+    /**
+     * Returns the unix time in relation to the current day
+     */
+    public function format();
 }
 
 class UnixTime implements UnixTimeInterface
@@ -37,8 +42,8 @@ class UnixTime implements UnixTimeInterface
     /**
      * UnixTime constructor.
      *
-     * @param string $preset     one of UnixTimePresets::class->presets
-     * @param string $multiplier one of UnixTimeMultipliers::class->multipliers
+     * @param string $preset     one of UnixTimePresets->presets
+     * @param string $multiplier one of UnixTimeMultipliers->multipliers
      */
     public function __construct(string $preset, string $multiplier = "")
     {
@@ -82,6 +87,11 @@ class UnixTime implements UnixTimeInterface
     public function echo()
     {
         echo $this->unixTime;
+    }
+
+    public function format()
+    {
+        return time() + $this->unixTime;
     }
 }
 
