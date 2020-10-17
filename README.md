@@ -1,11 +1,16 @@
 #### UnixTime
 PHP Library containing presets and multipliers to generate an amount of time in seconds quickly.
-
+###### Version 1.0.1
 #### Usage
+
+It's as easy as `new UnixTime("5m");`
+
 ```php
+echo new UnixTime("5m");
+
 $time = new UnixTime("5m", "x3");
 echo $time->time();
-$time->echo();
+$time->time(true); // @param $echo
 ```
 Output: `900`
 

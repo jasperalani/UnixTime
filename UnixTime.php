@@ -76,13 +76,21 @@ class UnixTime implements UnixTimeInterface
 
     public function time(bool $echo = false): int
     {
-        if($echo) echo $this->unixTime;
+        if ($echo) {
+            echo $this->unixTime;
+        }
+
         return $this->unixTime;
     }
 
     public function format()
     {
         return time() + $this->unixTime;
+    }
+
+    public function __toString()
+    {
+        return (string) $this->unixTime;
     }
 }
 
