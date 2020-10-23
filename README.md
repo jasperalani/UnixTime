@@ -20,6 +20,3 @@ echo $time->format(); // format() functions returns the current time + preset ti
 #### Todo
 - Create better preset system to allow of any number infront of a valid identifer ie. s for second, m for minute
 - Create better multiplier system to allow for multiple mutlipliers as arguments.
-
---- 
-This project was designed for use in a cookie handling php library.
