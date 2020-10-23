@@ -212,3 +212,10 @@ class UnixTimeMultipliers
         return $this->multipliers;
     }
 }
+
+echo new UnixTime("5m"); // five minutes
+
+//$time = new UnixTime('5m', 'x3'); // fifteen minutes
+//$time = new UnixTime('three_years', 'x2');
+//echo $time->time(); // 900
+//echo $time->format(); // 1603477647 (current time + preset time)
